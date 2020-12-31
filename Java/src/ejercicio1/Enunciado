@@ -1,0 +1,5 @@
+1) Una concesionaria exclusiva de las marcas Qeugeot, Giat y Debrolet, tiene a la venta vehículos, de los cuales se conoce su marca, precio y tipo (auto, camioneta o utilitario). A su vez, cada uno de los vehículos puede tener personas que demuestran interés, de las que interesa guardar su DNI y fecha de nacimiento.
+Basado en el enunciado descripto, realizá:
+A) El diagrama de clases que lo modelice, con sus relaciones, atributos y métodos.
+B) La explotación del método vehiculosMasEconomicos de la clase Concesionaria, el cual debe devolver una lista de vehículos cuyo precio esté por debajo del promedio general.
+C) La explotación del método cantidadDeVehiculosSegunMarca de la clase Concesionaria, que recibe como parámetro una marca y debe devolver la cantidad de vehículos de tal marca.
