@@ -1,0 +1,24 @@
+4) Flix es un nuevo sitio en el cual los clientes pueden ver películas online. Para diferenciarse
+de su competencia, sus clientes pueden optar por dos tipos de servicios. El servicio Standard y el
+servicio Premium. El servicio Premium da acceso a películas más nuevas (generalmente estrenos de
+ese mismo año).
+Para ver cualquier película el cliente (del cual se sabe su DNI y su nombre) no debe poseer deuda.
+Para ver contenido Premium, el cliente debe estar suscripto al servicio Premium.
+Existe un método ya provisto de la clase Cliente llamado obtenerSaldo que devuelve el saldo que
+adeuda ese cliente (dicho método no debe diagramarse en NS, solo en UML). Si el saldo es positivo,
+entonces el cliente es deudor.
+Por último, al sitio le interesa llevar un registro de las películas que miró cada cliente.
+Basado en el enunciado descripto, realizá:
+A) El diagrama de clases que lo modelice, con sus relaciones, atributos y métodos.
+B) La explotación del método verPelicula perteneciente a la clase Flix, el cual recibe
+como parámetros el DNI de un cliente y el nombre de la película a ver. Debe devolver alguno
+de los siguientes resultados:
+• CLIENTE_INEXISTENTE: El cliente no existe.
+• CONTENIDO_INEXISTENTE: La película no existe.
+• CLIENTE_DEUDOR: El cliente posee deuda.
+• CONTENIDO_NO_DISPONIBLE: La película es Premium y el cliente no está abonado a dicho
+servicio.
+• ALQUILER_OK: La película puede verse sin inconvenientes. La película debería quedar
+registrada en el historial de películas vistas del cliente.
+C) La explotación del método darDeBaja de la clase Flix, que reciba un DNI y elimine de la
+lista al cliente asociado a tal DNI.
