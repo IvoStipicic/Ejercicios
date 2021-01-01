@@ -1,0 +1,13 @@
+3) Una inmobiliaria posee una lista con todos los barrios en donde posee propiedades a la venta. Cada barrio tiene su nombre y una lista con todas las propiedades a la venta. De cada propiedad se sabe su domicilio (String), su precio y su tipo (Departamento, Casa o PH).
+Basado en el enunciado descripto, realizá:
+A) El diagrama de clases que lo modelice, con sus relaciones, atributos y métodos.
+B) La explotación del método mostrarPropiedades de la clase Barrio, que reciba un tipo de propiedad y muestre las direcciones y precios de todas las propiedades de ese tipo.
+C) La explotación del método mostrarPropiedades de la clase Inmobiliaria, el cual debe mostrar la dirección y el precio de todas las propiedades que posea a la venta.
+D) La explotación del método obtenerBarrioMaxProp de la clase Inmobiliaria, que devuelva una lista de él o los barrios con la mayor cantidad de propiedades en cartera.
+Fundamentos de Programación Trabajo Práctico Nº 4
+2
+E) La explotación del método borrarPropiedad de la clase Inmobiliaria, que reciba un
+domicilio y elimine la propiedad asociada a ese domicilio del barrio donde se encuentre.
+F) La explotación del método cambiarPropiedadDeBarrio de la clase Inmobiliaria, que
+reciba un domicilio y un barrio y mueva la propiedad asociada a ese domicilio al nuevo barrio,
+removiéndola del barrio anterior.
