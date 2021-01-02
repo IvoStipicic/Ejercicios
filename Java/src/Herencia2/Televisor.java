@@ -5,9 +5,10 @@ public class Televisor extends Producto{
 	private float pulgadas;
 	private boolean esSmart;
 	
-	public Televisor(String marca, String modelo, double precio) {
+	public Televisor(String marca, String modelo, double precio, float pulgadas, boolean esSmart) {
 		super(marca, modelo, precio);
-		// TODO Auto-generated constructor stub
+		this.setPulgadas(pulgadas);
+		this.setEsSmart(esSmart);
 	}
 
 	
@@ -39,10 +40,15 @@ public class Televisor extends Producto{
 		}
 		return esSmart;
 	}
+
+
 	@Override
 	public String toString() {
-		return "Televisor [pulgadas=" + pulgadas + ", esSmart=" + this.esSmart() + "]";
+		return "Televisor: pulgadas " + pulgadas + ", Smart: " + esSmart() + ", marca " + getMarca()
+				+ ", modelo " + getModelo() + ", precio $" + getPrecio();
 	}
+
+	
 	
 	
 }

@@ -30,7 +30,7 @@ public class Producto {
 		this.marca = marca;
 	}
 
-	private String getModelo() {
+	public String getModelo() {
 		
 		return modelo;
 	}
