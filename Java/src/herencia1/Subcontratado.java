@@ -34,12 +34,6 @@ public class Subcontratado extends Empleado{
 		}
 		this.precioHora = precioHora;
 	}
-	
-	@Override
-	public String toString() {
-		
-		return super.toString() + " Sueldo: $" + this.calcularPago();
-	}
 
 	@Override
 	public float calcularPago() {
@@ -47,4 +41,9 @@ public class Subcontratado extends Empleado{
 		return this.cantHoras * this.precioHora;
 	}
 
+	@Override
+	public String toString() {
+		
+		return super.toString() + " Sueldo: $" + this.calcularPago();
+	}
 }
