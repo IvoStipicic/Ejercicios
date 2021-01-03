@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asincronia en Javascript</title>
+</head>
+<body>
+    <h1>Asincronia en Javascript</h1>
+
+    <script>
+
+        console.log("Clase 1");
+
+        let timeOut = setTimeout(() =>{
+
+            console.log("Ejecutando un setTimeOut, esto se ejecuta una sola vez");
+        
+        },3000);
+
+        let codigoInterval = setInterval(() =>{
+
+            console.log("Esto se ejecuta indefinidamente cada cierto intervalo de tiempo")
+        
+        },1000);
+
+        let temporizador = setInterval(() =>{
+
+            console.log(new Date().toLocaleTimeString());
+        
+        },1000)
+
+        clearTimeout(timeOut);
+        clearInterval(temporizador);
+        clearInterval(codigoInterval);
+      
+        console.log("clase 2: Asincronia y Even Loop");
+    </script>
+</body>
+</html>
