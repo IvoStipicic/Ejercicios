@@ -13,7 +13,6 @@ public class Test {
 		Lavarropa lavarropa = new Lavarropa("Drean","CONCEPT 5.05",6799,6,false);
 		casa.agregarProductos(lavarropa);
 		
-		casa.ofrecerProductos();
 	}
 
 }

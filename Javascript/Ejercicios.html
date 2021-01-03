@@ -179,6 +179,79 @@
         }
 
         factorial(5);
+
+        //12
+        const numeroPrimo = (numero = undefined) =>{
+
+            if(numero === undefined) return console.warn("No ingresaste un numero");
+            
+            if(typeof numero !== "number") return console.error(`El valor ${numero} ingresado no es un numero`);
+
+            if(numero === 0) return console.warn("El numero no puede ser cero");
+
+            if(numero === 1) return console.warn("El numero no puede ser uno");
+
+            if(Math.sign(numero) === -1) return console.error("El numero no puede ser negativo");
+
+            let divisible = false;
+
+            for(let i = 2; i < numero; i++){
+
+                if(numero%i === 0){
+
+                    divisible = true;
+                    break;
+                }
+            }
+            return (divisible)
+            ? console.log(`El numero ${numero} no es primo`)
+            : console.log(`El numero ${numero} es primo`);
+            
+        }
+
+        numeroPrimo(10);
+
+
+        //13
+        const numeroParImpar = (numero = undefined) =>{
+
+            if(numero === undefined) return console.warn("No ingresaste un numero");
+
+            if(typeof numero !== "number") return console.error(`El valor ${numero} ingresado no es un numero`);
+
+            return ((numero%2) === 0)
+             ? console.log(`El numero ${numero} es par`)
+             : console.log(`El numero ${numero} es impar`);
+            
+        }
+        
+        numeroParImpar(5);
+
+        //14
+        const convertirGrados = (grados = undefined, unidad = undefined)=>{
+            if(grados === undefined) return console.warn("No ingresaste grados a convertir");
+
+            if(typeof grados !== "number") return console.error(`El valor ${numero} ingresado no es un numero`);
+        
+            if(unidad === undefined) return console.warn("No ingresaste grados a convertir");
+
+            if(typeof unidad !== "string") return console.error(`El valor ${unidad} ingresado no es una cadena de texto`);
+
+            if(unidad.length !== 1 || !/C|F/.test(unidad)) return console.warn("Valor de unidad invalido");
+        
+            if(unidad === "C"){
+
+                return console.info(`${grados}C = ${Math.round((grados * (9/5)) + 32)}F`);
+
+            }else  if(unidad === "F"){
+
+                return console.info(`${grados}F = ${Math.round((grados - 32) * (5/9))}C`);
+
+            }
+            
+        }
+
+        convertirGrados(100,"F");
     </script>
 </body>
 </html>
