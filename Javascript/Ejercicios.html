@@ -24,6 +24,9 @@
     15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
     16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
     17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+    18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
+    19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
+    20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
     <script>
         //1
         const contarCaracteres = (cadena  = "") => 
@@ -252,6 +255,49 @@
         }
 
         convertirGrados(100,"F");
+
+        //15
+        const convertirBinarioDecimal = (numero = undefined, base = undefined) =>{
+            if(numero === undefined) return console.warn("No ingresaste un numero a convertir");
+
+            if(typeof numero !== "number") return console.error(`El valor ${numero} ingresado no es un numero`);
+
+            if(base === undefined) return console.warn("No ingresaste la base a convertir");
+
+            if(typeof base !== "number") return console.error(`El valor ${base} ingresado no es un numero`);
+        
+            if(base === 2){
+                return console.info(`El numero ${numero} base ${base} = ${parseInt(numero,base)} base 10`);
+            }else if(base === 10){
+                return console.info(`El numero ${numero} base ${base} = ${numero.toString(base)} base 2`);
+            }else{
+                console.log("El tipo de base no es valido");
+            }
+        }
+
+        convertirBinarioDecimal(100,2);
+        convertirBinarioDecimal(4,10);
+        
+
+        //16
+        const aplicarDescuento = (monto = undefined, descuento = 0) =>{
+
+            if(monto === undefined) return console.warn("No ingresaste un monto");
+
+            if(typeof monto !== "number") return console.error(`El valor ${monto} ingresado no es un numero`);
+
+            if(monto === 0) return console.warn("El monto no puede ser 0");
+
+            if(Math.sign(monto) === -1) return console.error("El monto no puede ser negatio");
+
+            if(typeof descuento !== "number") return console.error(`El valor ${descuento} ingresado no es un numero`);
+        
+            if(Math.sign(descuento) === -1) return console.error("El descuento no puede ser negatio");
+       
+            return console.info(`${monto} - ${descuento}% = ${monto - ((monto * descuento)/100)}`);
+        }
+
+        aplicarDescuento(150,10);
     </script>
 </body>
 </html>
